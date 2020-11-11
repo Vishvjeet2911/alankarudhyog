@@ -1,0 +1,22 @@
+.container{
+    /* background-color: crimson; */
+}
+
+.db-card-content{
+    background-color: #3f51b5;
+    height: 100px;
+    text-align: center;
+}
+
+.db-card-footer{
+    background-color: crimson;
+    text-align: center;
+}
+
+.db-card{
+    height: 35vh;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

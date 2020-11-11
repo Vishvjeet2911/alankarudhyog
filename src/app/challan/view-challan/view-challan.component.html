@@ -1,0 +1,43 @@
+<div class="container">
+  <h1 class="mat-h1">Challan</h1>
+  <p class="mat-caption">All registered challan</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SNo.</th>
+        <th scope="col">Voucher</th>
+        <th scope="col">Company</th>
+        <th scope="col">Party Name</th>
+        <th scope="col">Vehicle Name</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Area</th>
+        <th scope="col">Payment Type</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Challan Date</th>
+        <th scope="col">Creation Date</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.challan_no}}</td> 
+        <td>NA</td>
+        <td>{{item.party_name}}</td>
+        <td>{{item.vehicleInfo}}</td>
+        <td>{{item.productInfo}}</td>
+        <td>NA</td>
+        <td>{{item.paymentMethod}}</td>
+        <td>{{item.advance_amount}}</td>
+        <td>{{item.challan_date}}</td>
+        <td>{{item.challan_date}}</td>
+    
+        <th><i (click)="deleteResto(item.id)" class="fa fa-trash" style="font: size 30px;color:red;">
+        </i>
+        <a (click)="lcUpdateChallan()"><i class="fa fa-edit" style="font: size 30px;color:blue;"></i></a>
+      </th>
+      </tr>
+    </tbody>
+  </table>
+</div>

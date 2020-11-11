@@ -1,0 +1,77 @@
+<div class="app-container">
+    <mat-toolbar color="primary" id="au-navbar">
+        <div class="sidenavIcon">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon [inline]="true">menu</mat-icon>
+            </button>
+        </div>
+        <span>
+            <h1 style="padding-left: 10px;">ALANKAR UDHYOG</h1>
+        </span>
+
+        <span class="toolbar-spacer"></span>
+        My Account
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav opened mode="side" position="start">
+            <mat-list class="menu">
+                <!-- <mat-card-header>
+                    <div mat-card-minemgmt class="minemgmt"></div>
+                </mat-card-header> -->
+                <div class="icon-bg-color">
+                    <a mat-tab-link [routerLink]="'/'">
+                        <img src="/assets/logo.png">
+                    </a>
+                </div>
+                <div class="menu-list-item">
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcDCard()">
+                            <mat-icon>dashboard</mat-icon>
+                           Dashboard
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button>
+                            <mat-icon>settings</mat-icon>
+                            Manage Masters
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcAddChallan()">
+                            <mat-icon>library_books</mat-icon>
+                            Challan
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcViewChallan()">
+                            <mat-icon>library_books</mat-icon>
+                            View/Edit Challan
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button>
+                            <mat-icon>receipt</mat-icon>
+                            Reciept
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button>
+                            <mat-icon>table_view</mat-icon>
+                            Report/Logs
+                        </button>
+                    </mat-list-item>
+                </div>
+            </mat-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="main-content">
+                <ng-container *ngComponentOutlet = "LC"></ng-container>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

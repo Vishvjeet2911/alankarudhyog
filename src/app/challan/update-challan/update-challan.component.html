@@ -1,0 +1,175 @@
+<div class="container">
+    <h4>Update Challan</h4>
+
+    <!-- success alert message start -->
+    <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success</strong> Your data has been updated.
+        <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <!-- success alert message end -->
+    
+    <div class="container">
+        <form [formGroup]="editChallan" (ngSubmit)="updateChallan()">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Challan No.*</label><br>
+                    <input type="text" class="form-control" formControlName="challan_no" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Date *</label><br>
+                    <!-- <input type="date" class="form-control" format="" id="challan_date" ngModel name="challan_date"  required/> -->
+                    <input class="form-control" id="challan_date" formControlName="challan_date"
+                        placeholder="{{valuedate | date: 'dd-MM-yyyy'}}" [minDate]="minDate" [maxDate]="maxDate"
+                        bsDatepicker #datepickerYMD="bsDatepicker" [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' }"
+                        required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Time *</label><br>
+                    <input type="time" placeholder="HH:mm:ss" class="form-control" id="challan_time"
+                        formControlName="challan_time" required>
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label name="labelcolor">Unit *</label><br>
+                    <input type="number" class="form-control" formControlName="unit" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label name="labelcolor">Party *</label><br>
+                    <select class="form-control" formControlName="selectParty" required>
+                        <option name="party">PARTY</option>
+                        <option name="party">PARTY</option>
+                        <option name="party">PARTY</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Party Name *</label><br>
+                    <input type="text" class="form-control" formControlName="party_name" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Party Address</label><br>
+                    <input type="text" class="form-control" formControlName="party_address" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Party Mobile</label><br>
+                    <input type="tel" class="form-control" formControlName="party_mobile" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>पार्टी का नाम</label><br>
+                    <input type="text" class="form-control" formControlName="party_name_hindi" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>पार्टी का पता</label><br>
+                    <input type="text" class="form-control" formControlName="party_address_hindi" />
+                </div>
+                <div class="col-md-4"></div>
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Vehicle *</label><br>
+                    <select class="form-control" formControlName="vehicleInfo" required>
+                        <option name="vehicle">PARTY</option>
+                        <option name="vehicle">PARTY</option>
+                        <option name="vehicle">PARTY</option>
+                    </select>
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Driver Name </label><br>
+                    <input type="text" class="form-control" formControlName="driver_name" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Driver Mobile</label><br>
+                    <input type="text" class="form-control" formControlName="driver_mobile" />
+                </div>
+    
+    
+    
+                <div class="form-group col-md-12">
+                    <label id="labelcolor">Product *</label><br>
+                    <select class="form-control" formControlName="productInfo" required>
+                        <option name="product">product</option>
+                        <option name="product">product</option>
+                        <option name="product">product</option>
+                    </select>
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">QTY (CFT) *</label><br>
+                    <input type="text" class="form-control" formControlName="qty" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Rate *</label><br>
+                    <input type="text" class="form-control" formControlName="rate" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Total Amount *</label><br>
+                    <input type="text" class="form-control" formControlName="total_amount" required />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label id="labelcolor">Payment *</label><br>
+                    <select class="form-control" formControlName="paymentMethod" required>
+                        <option name="payment">Select Payment Type</option>
+                        <option name="payment">Debit/Credit Card</option>
+                        <option name="payment">UPI</option>
+                        <option name="payment">Cash In Hand</option>
+                    </select>
+                </div>
+    
+                <div class="form-group col-md-2">
+                    <label id="labelcolor">Advance Amount *</label><br>
+                    <input type="text" class="form-control" formControlName="advance_amount" required />
+                </div>
+    
+                <div class="form-group col-md-2">
+                    <label>Balance Sheet</label><br>
+                    <input type="text" class="form-control" formControlName="balance_sheet" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Remark</label><br>
+                    <input type="text" class="form-control" formControlName="remark" />
+                </div>
+    
+                <div class="form-group col-md-12">
+                    <h5>Challan Details :</h5>
+                    <hr>
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Ravana No.</label><br>
+                    <input type="text" class="form-control" formControlName="ravana_number" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Weight (MT)</label><br>
+                    <input type="text" class="form-control" formControlName="Weight" />
+                </div>
+    
+                <div class="form-group col-md-4">
+                    <label>Royalty Amount</label><br>
+                    <input type="text" class="form-control" formControlName="Royalty_amount" />
+                </div>
+            </div>
+    
+            <div class="form-group col-md-12">
+                <button class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-secondary" placeholder="Submit & Print">Submit & Print</button>
+                <button type="reset" class="btn btn-danger" placeholder="Reset">Reset</button>
+            </div>
+        </form>
+        <div class="white-space"></div>
+    </div>
+</div>
+

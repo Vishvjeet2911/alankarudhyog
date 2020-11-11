@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from './dashboard/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'au';
+
+  LC:any;
+
+  ngOnInit(){
+    this.LC = HeaderComponent;
+  }
 }

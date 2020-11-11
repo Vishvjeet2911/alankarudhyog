@@ -1,0 +1,56 @@
+.app-container{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#au-navbar{
+    z-index:  45454;
+}
+mat-sidenav-container{
+    height: 100%;
+}
+mat-sidenav {
+    width: 280px;
+    padding: 15px;
+}
+
+.mat-drawer {
+    background-color: #023075;
+    color: #ffffff;
+}
+
+.main-content{
+    padding: 20px;
+}
+
+.toolbar-spacer{
+    flex: 1 1 auto;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sidenavIcon{
+    font-size: 20px;
+}
+
+.icon-bg-color{
+    background-color: #023075;
+}
+
+.menu-list-item{
+    background-color: #023075;
+    margin-top: 10%;
+    margin-left: 0%;
+    text-align: left;
+}
+
+#sidenav .menu-item mat-icon{
+    margin-right: 20px;
+}
+
+.menu-item{
+    background-color: #023075;
+    color: #ffffff;
+    border: 0ch;
+}
