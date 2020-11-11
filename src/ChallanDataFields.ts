@@ -1,5 +1,5 @@
 import { Time } from '@angular/common';
-
+// model of challan
 export interface ChallanDataFields{
     challan_no:  string;
     challan_date:  string;
