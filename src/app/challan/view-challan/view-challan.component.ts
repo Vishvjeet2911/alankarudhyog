@@ -22,7 +22,8 @@ export class ViewChallanComponent implements OnInit {
       this.collection = result
   })}
 
-  public lcUpdateChallan(){
+  public lcUpdateChallan(item){
+    this.viewChallanService.cid = item;
     this.hc.LC = UpdateChallanComponent;
   }
 

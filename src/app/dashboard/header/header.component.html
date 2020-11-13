@@ -12,7 +12,7 @@
         <span class="toolbar-spacer"></span>
         My Account
     </mat-toolbar>
-    <mat-sidenav-container>
+    <mat-sidenav-container class="sidenavcontainer">  
         <mat-sidenav #sidenav opened mode="side" position="start">
             <mat-list class="menu">
                 <!-- <mat-card-header>
@@ -39,9 +39,37 @@
                     </mat-list-item>
                     <mat-divider></mat-divider>
                     <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcAddLedger()">
+                            <mat-icon>category</mat-icon>
+                            Add Ledger
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcViewLedger()">
+                            <mat-icon>category</mat-icon>
+                            View/Edit Ledger
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcAddProduct()">
+                            <mat-icon>category</mat-icon>
+                            Add Product
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <button class="menu-item" mat-flat-button (click)="lcViewProduct()">
+                            <mat-icon>category</mat-icon>
+                            View/Edit Product
+                        </button>
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
                         <button class="menu-item" mat-flat-button (click)="lcAddChallan()">
                             <mat-icon>library_books</mat-icon>
-                            Challan
+                            Add Challan
                         </button>
                     </mat-list-item>
                     <mat-divider></mat-divider>
@@ -71,7 +99,7 @@
         <mat-sidenav-content>
             <div class="main-content">
                 <ng-container *ngComponentOutlet = "LC"></ng-container>
-            </div>
+            </div>`
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

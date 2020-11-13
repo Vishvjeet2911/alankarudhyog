@@ -1,0 +1,90 @@
+<h4>Update Ledger</h4>
+
+<!-- success alert message start -->
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong> Your data has been entered successfully.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<!-- success alert message end -->
+
+<div class="container">
+    <form [formGroup]="updateLedger" (ngSubmit)="getValues()">
+        <div class="row">
+
+            <div class="col-md-3">
+                <label id="labelcolor">Add Photo</label>
+            </div>
+            <div class="form-group col-md-8">
+              <!-- <input type="file" id="jcrop_fileinput" style="position: absolute; cursor: pointer; opacity: 0;width: 80px;height: 80px;"> -->
+                <!-- <input type="file" id="imageUpload"   class="form-control" placeholder="" formControlName="add_photo" required /> -->
+
+                  <input type="file" name="imageUpload" id="imageUpload" class="form-control hide" formControlName="add_photo" required  />
+                  <label for="imageUpload" class="btn btn-large">Select file</label>
+
+              </div>
+
+            <div class="col-md-3">
+              <label id="labelcolor">Ladger Name <span id="spancolor">*</span></label>
+          </div>
+          <div class="form-group col-md-8">
+              <input type="text" class="form-control" formControlName="ledger_name" required />
+          </div>
+
+          <div class="col-md-3">
+            <label id="labelcolor">Ledger Type <span id="spancolor">*</span></label>
+          </div>
+           <div class="form-group col-md-8">
+            <select class="form-control" formControlName="ledger_type" required>
+              <option name="party">Select Ledger Type</option>
+              <option name="party">Party</option>
+              <option name="party">Vehicle</option>
+          </select>
+            </div>
+            <div class="col-md-3">
+              <label id="labelcolor">Address-1</label>
+            </div>
+             <div class="form-group col-md-8">
+              <input type="text" class="form-control" formControlName="address_1" required />
+              </div>
+              <div class="col-md-3">
+                <label id="labelcolor">Address-2</label>
+              </div>
+               <div class="form-group col-md-8">
+                <input type="text" class="form-control" formControlName="address_2" required />
+                </div>
+                <div class="col-md-3">
+                  <label id="labelcolor">Driver Name</label>
+                </div>
+                 <div class="form-group col-md-8">
+                  <input type="text" class="form-control" formControlName="driver_name" required />
+                  </div>
+                  <div class="col-md-3">
+                    <label id="labelcolor">Mobile <span id="spancolor">*</span></label>
+                  </div>
+                   <div class="form-group col-md-8">
+                    <input type="text" class="form-control" formControlName="mobile" required />
+                    </div>
+                    <div class="col-md-3">
+                      <label id="labelcolor">GSTIN</label>
+                    </div>
+                     <div class="form-group col-md-8">
+                      <input type="text" class="form-control" formControlName="gstin" required />
+                      </div>
+
+
+            <div class="col-md-3">
+            </div>
+            <div class="form-group col-md-4">
+              <button class="btn btn-primary">Update</button>
+              <button type="reset" class="btn btn-danger" placeholder="Reset">Reset</button>
+          </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+

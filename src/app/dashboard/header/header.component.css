@@ -3,6 +3,9 @@
     overflow: hidden;
 }
 
+/* .sidenavcontainer{
+    display: flex;
+} */
 #au-navbar{
     z-index:  45454;
 }

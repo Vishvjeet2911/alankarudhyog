@@ -4,6 +4,11 @@ import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import { AddChallanComponent } from 'src/app/challan/add-challan/add-challan.component';
 import { DCardComponent } from '../d-card/d-card.component';
 import { ViewChallanComponent } from 'src/app/challan/view-challan/view-challan.component';
+import {ActivatedRoute} from '@angular/router'
+import { AddProductComponent } from 'src/app/product/add-product/add-product.component';
+import { ViewProductComponent } from 'src/app/product/view-product/view-product.component';
+import { AddLedgerComponent } from 'src/app/ledger/add-ledger/add-ledger.component';
+import { ViewLedgerComponent } from 'src/app/ledger/view-ledger/view-ledger.component';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +17,7 @@ import { ViewChallanComponent } from 'src/app/challan/view-challan/view-challan.
 })
 export class HeaderComponent implements OnInit {
 
+  constructor(private router:ActivatedRoute){}
   public LC:any;
 
   ngOnInit() {
@@ -28,5 +34,21 @@ export class HeaderComponent implements OnInit {
 
   lcViewChallan(){
     this.LC = ViewChallanComponent;
+  }
+
+  lcAddProduct(){
+    this.LC = AddProductComponent;
+  }
+
+  lcViewProduct(){
+    this.LC = ViewProductComponent;
+  }
+
+  lcAddLedger(){
+    this.LC = AddLedgerComponent;
+  }
+
+  lcViewLedger(){
+    this.LC = ViewLedgerComponent;
   }
 }

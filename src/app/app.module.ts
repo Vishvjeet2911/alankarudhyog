@@ -8,16 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ChallanModule } from './challan/challan.module';
+import {ProductModule} from './product/product.module';
+import { LedgerModule } from './ledger/ledger.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
     ChallanModule,
+    ProductModule,
+    LedgerModule,
     BrowserAnimationsModule,
     NgbModule,
     MDBBootstrapModule

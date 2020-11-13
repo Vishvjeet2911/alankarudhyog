@@ -4,35 +4,34 @@ import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
-export class ChallanService {
+export class ProductService {
 
-  cid:any;
+  pid:any;
 
-  url = "http://localhost:3000/challan"
+  url = "http://localhost:3000/product"
   rooturl = "http://localhost:3000"
 
   constructor(private http:HttpClient) { }
 
-  saveChallan(data)
+  saveProduct(data)
   {
     // console.warn(data)
     return this.http.post(this.url,data)  
   }
 
-  public getChallan()
+  public getProduct()
   {
     // console.warn(this.http.get(this.url))
     return this.http.get(this.url)  
   }
 
-  getCurrentChallan()
+  getCurrentProduct()
   {
-    return this.http.get(`${this.url}/${this.cid}`)
+    return this.http.get(`${this.url}/${this.pid}`)
   }
 
-  updateChallan(id, data)
+  updateProduct(id, data)
   {
     return this.http.put(`${this.url}/${id}`, data)
   }
-
 }

@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="mat-h1">Products</h1>
+    <p class="mat-caption">All registered Products</p>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">SNo.</th>
+          <th scope="col">Product code</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Creation Date</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of collection">
+          <th scope="row">{{count+1}}</th>
+          <td>{{item.code}}</td> 
+          <td>{{item.name}}</td>
+          <td>NA</td>      
+          <th><i (click)="deleteResto(item.id)" class="fa fa-trash" style="font: size 30px;color:red;">
+          </i><span></span>
+          <a (click)="lcUpdateProduct(item.id)"><i class="fa fa-edit" style="font: size 30px;color:blue;"></i></a>
+        </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>

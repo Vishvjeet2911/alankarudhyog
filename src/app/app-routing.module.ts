@@ -5,19 +5,19 @@ import { AddChallanComponent } from './challan/add-challan/add-challan.component
 import { UpdateChallanComponent } from './challan/update-challan/update-challan.component';
 
 const routes: Routes = [
-  {
-  path: 'challan',
-  loadChildren : ()=> import('./challan/challan.module')
-  .then(mod=>mod.ChallanModule)
- },
+//   {
+//   path: 'challan',
+//   loadChildren : ()=> import('./challan/challan.module')
+//   .then(mod=>mod.ChallanModule)
+//  },
 //  {
 //    path:'addchallan',
 //    component:AddChallanComponent
 //  },
-{
-  path: 'update/:id',
-  component:UpdateChallanComponent
-}
+// {
+//   path: 'update/:id',
+//   component:UpdateChallanComponent
+// }
 ];
 
 @NgModule({
